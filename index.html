@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <title>HAPPY NEW YEAR 2027 — NANDITA JAYSWAL</title>
+    <meta name="description" content="A cinematic New Year 2027 greeting experience dedicated to Nandita Jayswal." />
+    
+    <!-- Open Graph & Social Cards -->
+    <meta property="og:title" content="Happy New Year 2027 — Nandita Jayswal" />
+    <meta property="og:description" content="A special cinematic moment awaits. A new chapter, a beautiful beginning." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Immediate Theme Initialization to avoid flicker -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('theme_preference') || 'light';
+          if (saved === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module">
+      import './styles.css';
+    </script>
+  </head>
+  <body>
+    <!-- Ambient Stardust Canvas Background -->
+    <canvas id="welcomeCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- Warm Ambient Halo -->
+    <div class="ambient-halo" aria-hidden="true"></div>
+
+    <!-- Main Content Container -->
+    <main class="page-container">
+      <!-- Top Header Bar with Theme Toggle & Music Button -->
+      <header class="top-header">
+        <a href="index.html" class="brand-mark" aria-label="Nandita Jayswal New Year 2027">
+          <svg class="brand-twin-stars" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+          </svg>
+          <span class="brand-text">Nandita Jayswal</span>
+        </a>
+
+        <div class="header-controls">
+          <!-- Light / Dark Theme Switch -->
+          <button id="themeToggleBtn" class="control-btn" type="button" aria-label="Toggle theme">
+            <span id="themeBtnIcon">☀️</span>
+            <span id="themeBtnLabel">LIGHT</span>
+          </button>
+
+          <!-- Audio Toggle Button -->
+          <button id="audioToggleBtn" class="control-btn" type="button" aria-label="Enable background music">
+            <div class="audio-bars" aria-hidden="true">
+              <span class="audio-bar"></span>
+              <span class="audio-bar"></span>
+              <span class="audio-bar"></span>
+            </div>
+            <span id="audioBtnLabel">ENABLE MUSIC ♫</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Welcome Compact Hero Section -->
+      <section class="welcome-compact-hero">
+        <!-- Twin Celestial Stars Visual Storytelling -->
+        <div class="twin-stars-crest" aria-hidden="true">
+          <div class="twin-star-orb">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L14.4 8.6L21 11L14.4 13.4L12 20L9.6 13.4L3 11L9.6 8.6L12 2Z" />
+            </svg>
+          </div>
+          <div class="twin-connecting-line"></div>
+          <div class="twin-star-orb alt">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L14.4 8.6L21 11L14.4 13.4L12 20L9.6 13.4L3 11L9.6 8.6L12 2Z" />
+            </svg>
+          </div>
+        </div>
+
+        <p class="kicker">A Special Moment Awaits</p>
+
+        <!-- Giant 2027 Display -->
+        <h1 class="giant-year-compact gold-shimmer">2027</h1>
+
+        <div class="recipient-banner-compact shimmer-text">
+          Especially For Nandita Jayswal
+        </div>
+
+        <p class="welcome-quote-compact">
+          &ldquo;Some moments deserve more than words. This little experience is one of them.&rdquo;
+        </p>
+
+        <!-- Main Notice Card with Celebration Button Directly Below It -->
+        <div class="main-notice-container">
+          <div class="notice-header">&#10022; Before We Begin &#10022;</div>
+          <p class="notice-text">
+            This experience has been thoughtfully created with warm wishes and positive thoughts. Take a comfortable moment, enjoy the little details, and let the celebration unfold.
+          </p>
+
+          <div class="notice-audio-hint">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+            <span>For the complete experience, turn your sound on.</span>
+          </div>
+
+          <!-- Celebration Button Positioned Directly Inside / Below Notice -->
+          <div>
+            <a id="beginCelebrationBtn" href="celebration.html" class="cta-button" role="button">
+              <span>Let&rsquo;s Begin The Celebration</span>
+              <span class="cta-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Discreet Footer -->
+      <footer class="site-footer">
+        <p>A Personal Tribute &middot; 2027 &middot; Nandita Jayswal</p>
+      </footer>
+    </main>
+
+    <!-- Welcome Script Logic -->
+    <script type="module" src="./welcome.js"></script>
+  </body>
+</html>

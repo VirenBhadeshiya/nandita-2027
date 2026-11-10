@@ -1,0 +1,1010 @@
+/* ==========================================================================
+   NANDITA JAYSWAL — HAPPY NEW YEAR 2027
+   Premium Friendship Theme: Velvet Twilight, Rose-Gold & Warm Champagne
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap');
+
+/* ==========================================================================
+   1. Theme Variables: Dark Mode (Default) & Light Mode (.light)
+   ========================================================================== */
+:root {
+  /* Premium Friendship Theme: Deep Velvet Twilight, Rose-Gold & Champagne */
+  --bg-primary: #090610;
+  --bg-radial: radial-gradient(circle at 50% 18%, #191028 0%, #0F0A1C 55%, #06040C 100%);
+  
+  /* High Opacity Solid Velvet Glass Cards for Maximum Legibility */
+  --card-bg: rgba(20, 14, 34, 0.95);
+  --card-border: rgba(232, 175, 185, 0.28);
+  --card-shadow: 0 20px 50px rgba(4, 2, 8, 0.75), 0 0 35px rgba(232, 165, 184, 0.12);
+  
+  --text-primary: #FFF8F2;
+  --text-secondary: #D8CCE0;
+  --text-muted: #9D8DA8;
+  
+  --accent-gold: #F3D39B;
+  --accent-rose: #E8A5B8;
+  --accent-lavender: #B5A1E8;
+  --accent-glow: 0 0 25px rgba(232, 165, 184, 0.35);
+
+  --title-gradient: linear-gradient(135deg, #FFF8F2 0%, #F3D39B 35%, #E8A5B8 75%, #B5A1E8 100%);
+  
+  --btn-primary-bg: linear-gradient(135deg, #2D1A3E 0%, #48275E 50%, #20122E 100%);
+  --btn-primary-text: #FFF8F2;
+  --btn-primary-border: 1px solid rgba(232, 165, 184, 0.45);
+  --btn-primary-shadow: 0 8px 25px rgba(10, 4, 18, 0.6), 0 0 22px rgba(232, 165, 184, 0.3);
+
+  --halo-glow: radial-gradient(circle, rgba(232, 165, 184, 0.16) 0%, rgba(181, 161, 232, 0.08) 50%, transparent 70%);
+  --canvas-clear-alpha: rgba(9, 6, 16, 0.22);
+  
+  --font-cinzel: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Light Theme: Cashmere Warm Pearl, Soft Rose & Antique Champagne */
+html.light {
+  --bg-primary: #FAF7F5;
+  --bg-radial: radial-gradient(circle at 50% 15%, #FFFFFF 0%, #F6F0EC 55%, #EDE4DD 100%);
+  
+  --card-bg: rgba(255, 255, 255, 0.97);
+  --card-border: rgba(185, 110, 130, 0.22);
+  --card-shadow: 0 16px 36px rgba(60, 30, 45, 0.08), 0 2px 8px rgba(60, 30, 45, 0.04);
+  
+  --text-primary: #1C1220;
+  --text-secondary: #4E3C50;
+  --text-muted: #7E6882;
+  
+  --accent-gold: #9E7428;
+  --accent-rose: #B84D6C;
+  --accent-lavender: #6B55A8;
+  --accent-glow: 0 4px 20px rgba(184, 77, 108, 0.2);
+
+  --title-gradient: linear-gradient(135deg, #1C1220 0%, #B84D6C 50%, #9E7428 100%);
+  
+  --btn-primary-bg: linear-gradient(135deg, #24142B 0%, #3B1C44 50%, #1A0D20 100%);
+  --btn-primary-text: #FFFFFF;
+  --btn-primary-border: 1px solid rgba(184, 77, 108, 0.35);
+  --btn-primary-shadow: 0 6px 22px rgba(28, 18, 32, 0.25), 0 0 15px rgba(184, 77, 108, 0.18);
+
+  --halo-glow: radial-gradient(circle, rgba(232, 165, 184, 0.18) 0%, rgba(243, 211, 155, 0.08) 50%, transparent 70%);
+  --canvas-clear-alpha: rgba(250, 247, 245, 0.28);
+}
+
+/* ==========================================================================
+   2. Reset & Mobile-First Core Architecture
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body {
+  background: var(--bg-radial);
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  width: 100%;
+  color: var(--text-primary);
+  position: relative;
+  line-height: 1.6;
+  transition: background 0.4s ease;
+}
+
+/* Background Canvas */
+.bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Page Container — Fully Responsive */
+.page-container {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.15rem 1rem 2.5rem;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .page-container {
+    padding: 2rem 2rem 3.5rem;
+  }
+}
+
+/* Ambient Halo */
+.ambient-halo {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(85vw, 580px);
+  height: min(85vw, 580px);
+  border-radius: 50%;
+  background: var(--halo-glow);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 1;
+  animation: pulseAmbient 8s ease-in-out infinite alternate;
+}
+
+@keyframes pulseAmbient {
+  0% { transform: translateX(-50%) scale(0.92); opacity: 0.7; }
+  100% { transform: translateX(-50%) scale(1.08); opacity: 1; }
+}
+
+/* ==========================================================================
+   3. Header & Controls
+   ========================================================================== */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--card-border);
+  position: relative;
+  z-index: 20;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.brand-twin-stars {
+  width: 24px;
+  height: 24px;
+  color: var(--accent-rose);
+  filter: drop-shadow(0 0 8px rgba(232, 165, 184, 0.5));
+  animation: rotateSlow 24s linear infinite;
+}
+
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.brand-text {
+  font-family: var(--font-cinzel);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Control Buttons (Theme & Audio) */
+.control-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0.42rem 0.85rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  touch-action: manipulation;
+}
+
+.control-btn:hover, .control-btn:focus-visible {
+  border-color: var(--accent-rose);
+  transform: translateY(-1px);
+  box-shadow: var(--accent-glow);
+}
+
+.audio-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 11px;
+  width: 12px;
+}
+
+.audio-bar {
+  width: 2px;
+  background-color: var(--accent-rose);
+  border-radius: 1px;
+  height: 3px;
+  transition: height 0.2s ease;
+}
+
+.control-btn.playing .audio-bar:nth-child(1) { animation: soundBar 0.9s ease-in-out infinite alternate; }
+.control-btn.playing .audio-bar:nth-child(2) { animation: soundBar 1.2s ease-in-out infinite 0.2s alternate; }
+.control-btn.playing .audio-bar:nth-child(3) { animation: soundBar 0.7s ease-in-out infinite 0.4s alternate; }
+
+@keyframes soundBar {
+  0% { height: 3px; }
+  100% { height: 11px; }
+}
+
+/* ==========================================================================
+   4. Typography & Shimmer
+   ========================================================================== */
+.shimmer-text {
+  background: var(--title-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.kicker {
+  font-family: var(--font-cinzel);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-rose);
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Portrait Frame (Dedicated to Nandita Jayswal)
+   ========================================================================== */
+.portrait-frame-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem auto 1rem;
+  position: relative;
+}
+
+.portrait-frame {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  padding: 3.5px;
+  background: linear-gradient(135deg, var(--accent-rose) 0%, var(--accent-gold) 50%, var(--accent-lavender) 100%);
+  box-shadow: 0 0 25px rgba(232, 165, 184, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .portrait-frame {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.portrait-frame:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 35px rgba(232, 165, 184, 0.6), 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.portrait-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid var(--card-bg);
+}
+
+.portrait-badge-sparkle {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background: var(--card-bg);
+  border: 1px solid var(--accent-rose);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  color: var(--accent-gold);
+  box-shadow: 0 0 10px rgba(232, 165, 184, 0.5);
+}
+
+
+/* ==========================================================================
+   5. PAGE 1: Welcome Page (Compact Viewport, Notice + Button Directly Below)
+   ========================================================================== */
+.welcome-compact-hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem 0 1rem;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Twin Stars Visual Crest (Loyalty, Warmth & Friendship) */
+.twin-stars-crest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 0.85rem;
+  position: relative;
+}
+
+.twin-star-orb {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.twin-star-orb svg {
+  width: 26px;
+  height: 26px;
+  color: var(--accent-rose);
+  filter: drop-shadow(0 0 10px rgba(232, 165, 184, 0.6));
+  animation: pulseTwin 3.5s ease-in-out infinite alternate;
+}
+
+.twin-star-orb.alt svg {
+  width: 22px;
+  height: 22px;
+  color: var(--accent-gold);
+  animation-delay: 1.75s;
+}
+
+.twin-connecting-line {
+  position: relative;
+  width: 50px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(232, 165, 184, 0.2), var(--accent-rose), rgba(232, 165, 184, 0.2));
+}
+
+.twin-connecting-line::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  box-shadow: 0 0 8px var(--accent-gold);
+  animation: traverseTwin 4s ease-in-out infinite alternate;
+}
+
+@keyframes traverseTwin {
+  0% { left: 0%; opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { left: 90%; opacity: 0.3; }
+}
+
+@keyframes pulseTwin {
+  0% { transform: scale(0.92); opacity: 0.8; }
+  100% { transform: scale(1.08); opacity: 1; filter: drop-shadow(0 0 14px rgba(232, 165, 184, 0.9)); }
+}
+
+/* Compact Giant Year 2027 */
+.giant-year-compact {
+  font-family: var(--font-cinzel);
+  font-size: clamp(3.2rem, 11vw, 5.6rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  margin: 0.2rem 0 0.4rem;
+}
+
+.recipient-banner-compact {
+  font-family: var(--font-cinzel);
+  font-size: clamp(1.4rem, 4.5vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.welcome-quote-compact {
+  font-family: var(--font-cormorant);
+  font-size: clamp(1.05rem, 2.8vw, 1.25rem);
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.35rem;
+  max-width: 560px;
+}
+
+/* ==========================================================================
+   Central Notice Card (Solid Opacity Glass + Button Directly Below)
+   ========================================================================== */
+.main-notice-container {
+  width: 100%;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  border-radius: 18px;
+  padding: 1.6rem 1.4rem 1.6rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: relative;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.notice-header {
+  font-family: var(--font-cinzel);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent-rose);
+  margin-bottom: 0.65rem;
+}
+
+.notice-text {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 0.9rem;
+}
+
+.notice-audio-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent-rose);
+  background: rgba(232, 165, 184, 0.08);
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  border: 1px solid var(--card-border);
+  margin-bottom: 1.5rem;
+}
+
+/* Master Celebration CTA Button — Directly Below Notice */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border: var(--btn-primary-border);
+  box-shadow: var(--btn-primary-shadow);
+  font-family: var(--font-cinzel);
+  font-size: clamp(0.85rem, 2.5vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.05rem 2.2rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  touch-action: manipulation;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.cta-button:hover, .cta-button:focus-visible {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), var(--accent-glow);
+}
+
+.cta-button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.cta-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.25s ease;
+}
+
+.cta-button:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   6. PAGE 2: Celebration Sky & Wish Section
+   ========================================================================== */
+.celebration-sky-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.75rem 0 1.5rem;
+}
+
+.hero-subhead {
+  font-family: var(--font-cinzel);
+  font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+  letter-spacing: 0.32em;
+  color: var(--accent-rose);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.hero-main-title {
+  font-family: var(--font-cinzel);
+  font-size: clamp(2rem, 6.5vw, 4.2rem);
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.hero-year-2027 {
+  font-family: var(--font-cinzel);
+  font-size: clamp(3.8rem, 14vw, 7.5rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 0.95;
+  margin: 0.2rem 0 0.5rem;
+}
+
+.hero-dedicated-name {
+  font-family: var(--font-cinzel);
+  font-size: clamp(1.6rem, 5.5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+}
+
+.hero-quote {
+  font-family: var(--font-cormorant);
+  font-size: clamp(1.15rem, 3.2vw, 1.45rem);
+  font-style: italic;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 1.85rem;
+  line-height: 1.6;
+}
+
+/* Make A Wish Feature */
+.wish-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.2rem 0 2.5rem;
+  width: 100%;
+}
+
+.wish-button {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  color: var(--text-primary);
+  font-family: var(--font-cinzel);
+  font-size: clamp(0.85rem, 2.5vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 0.95rem 2.2rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: var(--card-shadow), var(--accent-glow);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  touch-action: manipulation;
+}
+
+.wish-button:hover, .wish-button:focus-visible {
+  transform: translateY(-2px) scale(1.03);
+  border-color: var(--accent-rose);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), var(--accent-glow);
+}
+
+.wish-button:active {
+  transform: scale(0.96);
+}
+
+.wish-toast {
+  margin-top: 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--accent-rose);
+  box-shadow: var(--card-shadow), var(--accent-glow);
+  border-radius: 14px;
+  padding: 1.25rem 1.75rem;
+  max-width: 520px;
+  text-align: center;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  opacity: 0;
+  transform: translateY(15px);
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wish-toast.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.wish-toast-title {
+  font-family: var(--font-cinzel);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent-rose);
+  margin-bottom: 0.35rem;
+}
+
+.wish-toast-text {
+  font-family: var(--font-cormorant);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   7. Greeting Card (High Opacity Glass for Maximum Legibility)
+   ========================================================================== */
+.greeting-card-wrapper {
+  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.greeting-card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  border-radius: 20px;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 5vw, 3rem);
+  max-width: 780px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.greeting-header {
+  font-family: var(--font-cinzel);
+  font-size: clamp(1.2rem, 3.5vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.greeting-subhead {
+  font-family: var(--font-playfair);
+  font-size: clamp(1rem, 2.8vw, 1.35rem);
+  font-style: italic;
+  color: var(--accent-rose);
+  margin-bottom: 1.75rem;
+}
+
+.greeting-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto 2.25rem;
+  max-width: 260px;
+}
+
+.greeting-divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-rose), transparent);
+}
+
+.greeting-divider-star {
+  color: var(--accent-rose);
+  font-size: 0.85rem;
+}
+
+.greeting-body {
+  font-family: var(--font-cormorant);
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
+  line-height: 1.85;
+  color: var(--text-primary);
+  text-align: center;
+  margin: 0 auto;
+  max-width: 660px;
+}
+
+.greeting-body p {
+  margin-bottom: 1.75rem;
+}
+
+.greeting-body p:last-child {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--accent-rose);
+}
+
+/* ==========================================================================
+   8. Friendship Story Section: Two Linked Guiding Stars
+   ========================================================================== */
+.connection-story-section {
+  margin: 2.5rem 0 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.twin-lights-interactive-stage {
+  position: relative;
+  width: 220px;
+  height: 110px;
+  margin: 1.25rem auto;
+}
+
+.light-orb-one, .light-orb-two {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  filter: blur(1px);
+}
+
+.light-orb-one {
+  background: radial-gradient(circle, #FFFFFF 15%, var(--accent-rose) 60%, transparent 85%);
+  box-shadow: 0 0 25px var(--accent-rose);
+  top: 36px;
+  left: 35px;
+  animation: orbitLightOne 8s ease-in-out infinite alternate;
+}
+
+.light-orb-two {
+  background: radial-gradient(circle, #FFFFFF 15%, var(--accent-gold) 60%, transparent 85%);
+  box-shadow: 0 0 25px var(--accent-gold);
+  top: 36px;
+  right: 35px;
+  animation: orbitLightTwo 8s ease-in-out infinite alternate;
+}
+
+.light-tether-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@keyframes orbitLightOne {
+  0% { transform: translate(0, 0) scale(0.95); }
+  50% { transform: translate(30px, -15px) scale(1.1); }
+  100% { transform: translate(50px, 10px) scale(1.0); }
+}
+
+@keyframes orbitLightTwo {
+  0% { transform: translate(0, 0) scale(1.05); }
+  50% { transform: translate(-30px, 15px) scale(0.95); }
+  100% { transform: translate(-50px, -10px) scale(1.1); }
+}
+
+.connection-story-text {
+  font-family: var(--font-playfair);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0.5rem auto 0;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   9. Closing Section
+   ========================================================================== */
+.closing-section {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.closing-headline {
+  font-family: var(--font-cinzel);
+  font-size: clamp(1.25rem, 4vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  max-width: 680px;
+  margin: 0 auto 1.25rem;
+}
+
+.closing-warmest {
+  font-family: var(--font-cinzel);
+  font-size: 0.85rem;
+  letter-spacing: 0.35em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.closing-name-banner {
+  font-family: var(--font-cinzel);
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  margin-bottom: 2.25rem;
+}
+
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+  font-family: var(--font-cinzel);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.secondary-button:hover, .secondary-button:focus-visible {
+  border-color: var(--accent-rose);
+  transform: translateY(-2px);
+  box-shadow: var(--accent-glow);
+}
+
+/* ==========================================================================
+   Moments Gallery Section (Real Candid Snapshots of Nandita)
+   ========================================================================== */
+.moments-gallery-section {
+  margin: 3.5rem 0 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+  width: 100%;
+}
+
+@media (min-width: 540px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+.gallery-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), var(--accent-glow);
+  border-color: var(--accent-rose);
+}
+
+.gallery-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.04);
+}
+
+.gallery-info {
+  padding: 1.15rem 1.25rem 1.35rem;
+}
+
+.gallery-tag {
+  font-family: var(--font-cinzel);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-rose);
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+.gallery-caption {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Footer note */
+.site-footer {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  font-family: var(--font-sans);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

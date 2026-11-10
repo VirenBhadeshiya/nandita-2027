@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <title>2027 — CELEBRATION FOR NANDITA JAYSWAL</title>
+    <meta name="description" content="Cinematic 2027 celebration for Nandita Jayswal with celestial night sky fireworks and inspiring original instrumental music." />
+    
+    <!-- Open Graph & Social Cards -->
+    <meta property="og:title" content="2027 Celebration — Nandita Jayswal" />
+    <meta property="og:description" content="2027 stands before you like a breathtaking new dawn. Celebrating an inspiring new chapter." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Immediate Theme Initialization -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('theme_preference') || 'dark';
+          if (saved === 'light') {
+            document.documentElement.classList.add('light');
+          } else {
+            document.documentElement.classList.remove('light');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module">
+      import './styles.css';
+    </script>
+  </head>
+  <body>
+    <!-- Full Screen Fireworks Canvas (Background Night Sky) -->
+    <canvas id="fireworksCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- Ambient Lighting Halo -->
+    <div class="ambient-halo" aria-hidden="true"></div>
+
+    <!-- Main Content Container -->
+    <main class="page-container">
+      <!-- Top Navigation Header -->
+      <header class="top-header">
+        <a href="index.html" class="brand-mark" aria-label="Return to Welcome Page">
+          <svg class="brand-twin-stars" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" />
+          </svg>
+          <span class="brand-text">Nandita Jayswal</span>
+        </a>
+
+        <div class="header-controls">
+          <!-- Theme Toggle Button -->
+          <button id="themeToggleBtn" class="control-btn" type="button" aria-label="Toggle theme">
+            <span id="themeBtnIcon">🌙</span>
+            <span id="themeBtnLabel">DARK</span>
+          </button>
+
+          <!-- Audio Toggle Button -->
+          <button id="audioToggleBtn" class="control-btn" type="button" aria-label="Enable background music">
+            <div class="audio-bars" aria-hidden="true">
+              <span class="audio-bar"></span>
+              <span class="audio-bar"></span>
+              <span class="audio-bar"></span>
+            </div>
+            <span id="audioBtnLabel">ENABLE MUSIC ♫</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero Celebration Section -->
+      <section class="celebration-sky-container">
+        <p class="hero-subhead">The Magic of a New Beginning</p>
+
+        <h1 class="hero-main-title shimmer-text">Happy New Year</h1>
+
+        <div class="hero-year-2027 shimmer-text">2027</div>
+
+        <h2 class="hero-dedicated-name shimmer-text">Nandita Jayswal</h2>
+
+        <p class="hero-quote">
+          &ldquo;2027 brings countless new horizons, quiet triumphs, and genuine reasons to smile.&rdquo;
+        </p>
+
+        <!-- Interactive Make A Wish Feature -->
+        <div class="wish-section">
+          <button id="makeWishBtn" class="wish-button" type="button">
+            &#10022; MAKE A WISH &#10022;
+          </button>
+
+          <!-- Wish Feedback Toast Card -->
+          <div id="wishToast" class="wish-toast" role="status" aria-live="polite">
+            <div class="wish-toast-title">&#10022; A Little Golden Wish Is On Its Way &#10022;</div>
+            <p class="wish-toast-text">
+              2027 will honor your sincere dreams, illuminate every step forward, and bring peace, purpose, and lasting radiance to your journey, Nandita.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personalized Heartfelt Greeting Card (High Opacity Glass for Clear Legibility) -->
+      <section class="greeting-card-wrapper" aria-labelledby="greetingHeading">
+        <div class="greeting-card">
+          <!-- Dedicated Portrait of Nandita Jayswal -->
+          <div class="portrait-frame-container">
+            <div class="portrait-frame">
+              <img src="nandita_portrait.jpg" onerror="this.onerror=null; this.src='assets/images/nandita_portrait.jpg'" alt="Nandita Jayswal" class="portrait-img" loading="eager" />
+              <div class="portrait-badge-sparkle" aria-hidden="true">&#10022;</div>
+            </div>
+          </div>
+
+          <h3 id="greetingHeading" class="greeting-header shimmer-text">A Heartfelt Wish For You</h3>
+          <p class="greeting-subhead">2027 &mdash; A Year of New Possibilities &amp; Radiance</p>
+
+          <div class="greeting-divider" aria-hidden="true">
+            <span class="greeting-divider-line"></span>
+            <span class="greeting-divider-star">&#10022;</span>
+            <span class="greeting-divider-line"></span>
+          </div>
+
+          <div class="greeting-body">
+            <p>
+              2027 stands before you like an unwritten horizon&mdash;vast, luminous, and filled with quiet wonder.
+            </p>
+            <p>
+              2027 will open the doors to beautiful possibilities, fill your days with golden moments, and bring you happiness that stays beyond every celebration.
+            </p>
+            <p>
+              May every ambition you quietly cherish find its direction, every sincere effort find its rightful reward, and every new sunrise bring renewed confidence to your journey.
+            </p>
+            <p>
+              Here&rsquo;s to a year as extraordinary, inspiring, and special as you are.
+            </p>
+            <p>
+              Wishing you a truly magical and fulfilling 2027, Nandita!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Candid Moments of Nandita Gallery Section (Realistic Everyday Snapshots) -->
+      <section class="moments-gallery-section" aria-label="Moments of Radiance">
+        <p class="kicker">Moments of Radiance</p>
+        <h3 class="greeting-header shimmer-text">A Year In Beautiful Colors</h3>
+        <p class="greeting-subhead">Capturing genuine smiles, natural warmth, and quiet strength.</p>
+
+        <div class="gallery-grid">
+          <!-- Photo 1: Sunny Botanical Garden -->
+          <article class="gallery-card">
+            <div class="gallery-img-wrapper">
+              <img src="nandita_garden.jpg" onerror="this.onerror=null; this.src='assets/images/nandita_garden.jpg'" alt="Nandita in botanical garden" class="gallery-img" loading="lazy" />
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-tag">Botanical Garden &middot; Sunshine</div>
+              <p class="gallery-caption">Natural warmth and joyful laughter under the open skies.</p>
+            </div>
+          </article>
+
+          <!-- Photo 2: City Street Walk -->
+          <article class="gallery-card">
+            <div class="gallery-img-wrapper">
+              <img src="nandita_street.jpg" onerror="this.onerror=null; this.src='assets/images/nandita_street.jpg'" alt="Nandita walking on city street" class="gallery-img" loading="lazy" />
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-tag">City Promenade &middot; Golden Hour</div>
+              <p class="gallery-caption">Bright confidence and genuine happiness along vibrant avenues.</p>
+            </div>
+          </article>
+
+          <!-- Photo 3: Cozy Coffee Shop -->
+          <article class="gallery-card">
+            <div class="gallery-img-wrapper">
+              <img src="nandita_cafe.jpg" onerror="this.onerror=null; this.src='assets/images/nandita_cafe.jpg'" alt="Nandita at cozy cafe" class="gallery-img" loading="lazy" />
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-tag">Aesthetic Caf&eacute; &middot; Peaceful Moments</div>
+              <p class="gallery-caption">Quiet serenity, comforting smiles, and thoughtful reflections.</p>
+            </div>
+          </article>
+
+          <!-- Photo 4: Scenic Lakeside Sunset -->
+          <article class="gallery-card">
+            <div class="gallery-img-wrapper">
+              <img src="nandita_sunset.jpg" onerror="this.onerror=null; this.src='assets/images/nandita_sunset.jpg'" alt="Nandita at lakeside sunset" class="gallery-img" loading="lazy" />
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-tag">Lakeside Sunset &middot; Golden Glow</div>
+              <p class="gallery-caption">New horizons unfolding with hope and endless possibilities.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Visual Storytelling: Two Guiding Stars (Pure Friendship, Strength & Inspiration) -->
+      <section class="connection-story-section" aria-label="Visual connection story">
+        <p class="kicker">Two Guiding Stars &middot; One Infinite Horizon</p>
+        <div class="twin-lights-interactive-stage">
+          <div id="lightOrbOne" class="light-orb-one" aria-hidden="true"></div>
+          <div id="lightOrbTwo" class="light-orb-two" aria-hidden="true"></div>
+          <svg class="light-tether-svg" viewBox="0 0 220 120" fill="none" aria-hidden="true">
+            <path d="M 54 59 Q 110 30 166 59" stroke="url(#blueTetherGrad)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8" />
+            <defs>
+              <linearGradient id="blueTetherGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#7CE0FF" stop-opacity="0.3" />
+                <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.95" />
+                <stop offset="100%" stop-color="#4D8BFF" stop-opacity="0.3" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <p class="connection-story-text">
+          Like two celestial stars traversing the quiet night sky&mdash;illuminating each other&rsquo;s path with mutual respect, warmth, understanding, and silent encouragement.
+        </p>
+      </section>
+
+      <!-- Closing Section -->
+      <section class="closing-section">
+        <h3 class="closing-headline shimmer-text">
+          2027 &mdash; Shine Brighter Than Ever.
+        </h3>
+        <p class="closing-warmest">With Warmest Wishes</p>
+        <div class="closing-name-banner shimmer-text">
+          &#10022; NANDITA JAYSWAL &#10022;
+        </div>
+
+        <a href="index.html" class="secondary-button" role="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+            <path d="M3 3v5h5"></path>
+          </svg>
+          <span>Experience Again</span>
+        </a>
+      </section>
+
+      <!-- Site Footer -->
+      <footer class="site-footer">
+        <p>A Dedicated Tribute &middot; Happy New Year 2027 &middot; Nandita Jayswal</p>
+      </footer>
+    </main>
+
+    <!-- Celebration Fireworks and Audio Script -->
+    <script type="module" src="./celebration.js"></script>
+  </body>
+</html>
